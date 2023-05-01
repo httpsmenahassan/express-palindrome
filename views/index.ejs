@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Palindrome Checker</title>
+</head>
+<body>
+  <h1>Is it a palindrome? Find out here!</h1>
+  <% for (let i = 0; i < entries.length; i++) { %>
+    <button class="delete" data-id="<%=entries[i]._id%>">Delete</button>
+    <p><%= entries[i].word %></p>
+    <p><%= entries[i].result %></p>
+  <%  } %>  
+  <form action="/words" method="post">
+    <input id="stringInput" type="text" name="palindrome" placeholder="Enter Name">
+    <button id="checkPalinBtn" type="submit" name="button">Click Me</button>
+  </form>
+  <h2 id="palinResult"></h2>
+  
+  <script type="text/javascript" src="/main.js"></script>
+</body>
+</html>
